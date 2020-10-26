@@ -8,7 +8,7 @@
 
 - Ana Kısım
 
-  - [Tema Değişimi (Theme Notifier)](html_input_fields.md)
+  - [Tema Değişimi (Theme Notifier)](src/core/theme_change.md)
   - [Ana Widgetlar (Core Widget)](html_input_fields.md)
   - [Ana Modeller (Base Models)](html_input_fields.md)
   - [Çoklu Dil (Muti Language)](html_input_fields.md)
