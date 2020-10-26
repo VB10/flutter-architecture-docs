@@ -68,5 +68,6 @@ Artık MaterialApp altındakı temayı şu şekilde tanımlıyoruz;
 Örnek kullanım ise;
 `Provider.of<ThemeNotifier>(context).changeValue(AppThemes.dark)`
 
-Diğer detaylara buradan erişebilirsiniz;
-[![IMAGE ALT TEXT HERE](https://img.youtube.com/vi/Xn8q9ywXKDc/0.jpg)](https://www.youtube.com/watch?v=Xn8q9ywXKDc&list=PL1k5oWAuBhgV_XnhMSyu2YLZMZNGuD0Cv)
+Diğer detaylara buradan erişebilirsiniz🥳
+
+[![Theme Management](https://img.youtube.com/vi/jQ8JuX5RpNc/0.jpg)](https://www.youtube.com/watch?v=jQ8JuX5RpNc&list=PL1k5oWAuBhgV_XnhMSyu2YLZMZNGuD0Cv&index=4)
