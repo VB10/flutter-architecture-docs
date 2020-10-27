@@ -11,7 +11,7 @@
   - [Tema Değişimi (Theme Notifier)](src/core/theme_change.md)
   - [Ana Widgetlar (Core Widget)](src/core/core_widget.md)
   - [Ana Modeller (Base Models)](src/core/base_models.md)
-  - [Çoklu Dil (Muti Language)](html_input_fields.md)
+  - [Çoklu Dil (Muti Language)](src/core/lang_change.md)
   - [State Yönetimi(State Management)](html_input_fields.md)
   - [Sabit değerler(Constants)](html_input_fields.md)
   - [Yönlendirme(Navigation)](html_input_fields.md)
