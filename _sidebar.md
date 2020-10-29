@@ -14,7 +14,7 @@
   - [Çoklu Dil (Muti Language)](src/core/lang_change.md)
   - [State Yönetimi(State Management)](src/core/state_management.md)
   - [Sabit değerler(Constants)](src/core/constants.md)
-  - [Yönlendirme(Navigation)](html_input_fields.md)
+  - [Yönlendirme(Navigation)](src/core/navigation.md)
   - [Saklama(Cache)](html_input_fields.md)
 
 - Ekranlar

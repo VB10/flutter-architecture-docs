@@ -47,5 +47,6 @@ Kullanırken ise;
 
 Diğer detaylara buradan erişebilirsiniz🥳
 
-[![Theme Management](https://img.youtube.com/vi/buUw_mU-Idg/0.jpg)](https://www.youtube.com/watch?v=buUw_mU-Idg&list=PL1k5oWAuBhgV_XnhMSyu2YLZMZNGuD0Cv&index=8)
+[![Theme Management](https://img.youtube.com/vi/cCBQSpDup4o/0.jpg)](https://www.youtube.com/watch?v=cCBQSpDup4o&list=PL1k5oWAuBhgV_XnhMSyu2YLZMZNGuD0Cv&index=5)
+
 
