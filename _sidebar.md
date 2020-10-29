@@ -13,7 +13,7 @@
   - [Ana Modeller (Base Models)](src/core/base_models.md)
   - [Çoklu Dil (Muti Language)](src/core/lang_change.md)
   - [State Yönetimi(State Management)](src/core/state_management.md)
-  - [Sabit değerler(Constants)](html_input_fields.md)
+  - [Sabit değerler(Constants)](src/core/constants.md)
   - [Yönlendirme(Navigation)](html_input_fields.md)
   - [Saklama(Cache)](html_input_fields.md)
 
