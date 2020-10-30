@@ -1,4 +1,6 @@
 # Yönlendirme (Navigation)
+
+![aa](https://assets.materialup.com/uploads/47f1c570-798d-4254-962d-70d732a1c1d4/preview.jpg)
 Projelerin hayatında en önemli olan kısımlardan birisidir. Özellikle mobil appte çok sıklıkla kullanıp sayfalar arası veri taşıma veya sayfalardan geçiş animasyonları gibi katmanları burada yapıyoruz.
 
 > Navigasyon işlemi için bir kaç yöntem mevcut ben en iyi yöntem olarak navigation key kullanarak global olarak yönetmeyi seviyorum. Bu yöntemle bir daha contexte ihtyacım olmadan kullanabiliyorum. Aynı şekilde bu değişkene signleton olarak erişebildiğim gibi provider kısmınada ekleyip istediğim anda erişebiliyorum.
@@ -96,3 +98,7 @@ class NavigationConstants {
 
 Ardından kullanırken;
 `NavigationService.instance.navigateToPage(NavigationConstants.TEST_VIEW)` şeklinde yapıp işlemimizi bitirmiş oluyoruz.
+
+Diğer detaylara buradan erişebilirsiniz🥳
+
+[![Theme Management](https://img.youtube.com/vi/cCBQSpDup4o/0.jpg)](https://www.youtube.com/watch?v=cCBQSpDup4o&list=PL1k5oWAuBhgV_XnhMSyu2YLZMZNGuD0Cv&index=5)
