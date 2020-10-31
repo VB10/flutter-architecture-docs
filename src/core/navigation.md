@@ -102,3 +102,8 @@ Ardından kullanırken;
 Diğer detaylara buradan erişebilirsiniz🥳
 
 [![Theme Management](https://img.youtube.com/vi/cCBQSpDup4o/0.jpg)](https://www.youtube.com/watch?v=cCBQSpDup4o&list=PL1k5oWAuBhgV_XnhMSyu2YLZMZNGuD0Cv&index=5)
+
+| Konular          | Açıklama                                                                                                                                                         |
+| ---------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| State Management | [![State Management](https://img.youtube.com/vi/eP2xfFylc24/0.jpg)](https://www.youtube.com/watch?v=eP2xfFylc24&list=PL1k5oWAuBhgV_XnhMSyu2YLZMZNGuD0Cv&index=3) |
+| Provider         | [![State Management](https://img.youtube.com/vi/jQ8JuX5RpNc/0.jpg)](https://www.youtube.com/watch?v=jQ8JuX5RpNc&list=PL1k5oWAuBhgV_XnhMSyu2YLZMZNGuD0Cv&index=4) |
