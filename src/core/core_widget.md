@@ -1,5 +1,7 @@
 # Ana Widget
 
+![Core Widget](../../image/drawio/core-widgets.png)
+
 Projeler widget'larımızı ne kadar parçalayabilirsek bizim gücümüz bir o kadar artacaktır.Bu yapıda dikkat etmemiz gereken hangileri ana widget olacağıdır.
 
 > Bu yazıyı okumadan önce [stateless](https://www.youtube.com/watch?v=ZkP7QgLaZcY) ve [statefull](https://www.youtube.com/watch?v=6baZbJiIuiQ) kavramları ile ilgili içerikleri izlemeyi unutmayın.

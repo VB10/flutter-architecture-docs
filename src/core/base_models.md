@@ -1,5 +1,7 @@
 # Ana Modeller
 
+![core-models](../../image/drawio/folders-core-models.png)
+
 Proje gelişim sürecinde gerekliliği tartışılabilir ama dünden bugüne okuduğum ve araştırdığımda bir çok faydasını gördüğüm bir yapı burada bizimle olacak.
 
 Birincisi ben sayfalarımı türetirken ana state üzerinden değil base state üzerinden türeterek onlara temel özellikler kazandırıyorum.

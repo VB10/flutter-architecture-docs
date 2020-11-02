@@ -1,5 +1,7 @@
 # Tema Değişikliği
 
+![theme](../../image/drawio/themes.png)
+
 Tema konusu flutter da çok önemli bir yer tutuyor. Özellikle flutter'in bize vermiş olduğu en büyük güçlerden olan tema karanlık(dark) ve aydınlık(light) özelliği bize ilk olarak verilmekte.
 
 ```dart

@@ -1,5 +1,7 @@
 # Çoklu Dil Desteği ve Anlık Dil Değişimi
 
+![lang](../../image/drawio/folders-lang.png)
+
 Bir çok uygulamanın artık olmazsa olmaz noktalarından birisidir. Özellikle ingilizce desteği çok önemli bir yer tutmakta. Önceden dil desteği gibi işlemler için kendi yapımı kullanırdım ama [easy localization](https://pub.dev/packages/easy_localization) paketi son haliyle bir çok konuda bu kısmı çözüyor.
 
 > Paketin kullanımı oldukça kolay ama yinede dikkat etmeniz gereken noktalar ve bir kaç script ile işinizi kolay yolla çözmeyi inceleyelim.

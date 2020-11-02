@@ -1,5 +1,7 @@
 # Veri Saklama (Local Cache)
 
+![cache](../../image/drawio/folders-cache.png)
+
 Veri konusu özellikle mobil uygulamada en önemli noktlaradan birisi değil takendisidir çünkü uygulamamız canlıya çıktığında(ilgili marketler de yayına girdiği an) eğer bir güvenlik testine girerse ilk baktıkları nokta uygulamnın cihaz içindeki verileri nerede ve nasıl tuttuğudur. Peki bu veriler nedir:
 
 1. Kullanıcının kimlik bilgileri(token,id vb)

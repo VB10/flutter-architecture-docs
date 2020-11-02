@@ -1,5 +1,7 @@
 # Sabit Değerler (Constants)
 
+![constants](../../image/drawio/folders-constants.png)
+
 Bir uygulama hayatında çok önemli olmasada yönetimi açısından önemli olan bir kavramdır. Özellikle sabit tanımlarken iki tavır belirliyorum genelde:
 
 1. Proje boyunca kullanılacak ve katma değeri çok yüksek ise(Proje ismi gibi) bunları [Magic Number](https://help.semmle.com/wiki/display/JAVA/Magic+numbers#:~:text=A%20magic%20number%20is%20a,for%20other%20programmers%20to%20understand.) olarak tanımlıyorum.
@@ -48,5 +50,3 @@ Kullanırken ise;
 Diğer detaylara buradan erişebilirsiniz🥳
 
 [![Theme Management](https://img.youtube.com/vi/cCBQSpDup4o/0.jpg)](https://www.youtube.com/watch?v=cCBQSpDup4o&list=PL1k5oWAuBhgV_XnhMSyu2YLZMZNGuD0Cv&index=5)
-
-

@@ -1,4 +1,6 @@
-# State Yönetimi
+# Durum(State) Yönetimi
+
+![state](../../image/drawio/folders-state-management.png)
 
 Öncelikle state dediğimiz kavram olay durum veya küçük bir hayat olarak düşünebiliriz. Bu kadar önemli tutan şey ise doğru bir yapı kurgulanması yönetimini kolaylaştırdığı gibi kompleks projelerde size ilgili yapı(framework) verdiği saf haliyle gitmek ilerledikçe karmaşa ve bazı performans sorunlarıda açacaktır.
 

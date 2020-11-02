@@ -1,10 +1,13 @@
-
 # İsimlendirme
+
+![nameds](../../image/drawio/nameds.png)
+
 Ve geldik yine benim en değer verdiğim konuya isimlendirme yaparken nelere dikkat etmeliyiz neler önemli.
 
 > Bir projede her şey belirli bir düzende ilerleyebilir ama özellikle kodun okunması, yeri veya anlamı gibi konular ilk isimlendirmelerle başlar.
 
 ## Klasörler
+
 - Ana katmana kod yazmak istiyorsak;
 
 `core/KATMANLAR`
@@ -61,13 +64,12 @@ Yine burada en iyi kullanım olarak [camel case pattern ](https://www.geeksforge
 
   `state_manager.dart`
 
-
 ## Değişkenler ve Sabitler
 
 Yine çok fazla önemi olan bir konuya geldik. Burada tercih de var ama tabiki lint kuralları da göz önüne alınarak seçimler var.
 
 - Proje boyunca değişmeyecek ve değerini bir çok yerde kullanacağımız bir değişkene ihtiyacımız varsa "[Magic Number](https://help.semmle.com/wiki/display/JAVA/Magic+numbers#:~:text=A%20magic%20number%20is%20a,for%20other%20programmers%20to%20understand.)" tercih ediyorum.
-  
+
 `static const PROJECT_NAME = "HWA"`
 
 - Proje içinde sadece sınıf içinde değişmeyecek bir değişken kullanıyorsak;
@@ -84,6 +86,6 @@ Yine çok fazla önemi olan bir konuya geldik. Burada tercih de var ama tabiki l
 
 `enum TimeValues {MIN,NORMAL,MAX}`
 
-> Burada enumlarımıza extension yazarak ona güç kazandırabiliriz. 
-> Örnek olarak extension TimeValuesExtension on TimeValues { String get name => this.toString() } gibi. 
+> Burada enumlarımıza extension yazarak ona güç kazandırabiliriz.
+> Örnek olarak extension TimeValuesExtension on TimeValues { String get name => this.toString() } gibi.
 > Bu konuyu extension başlığında inceleyeceğiz.

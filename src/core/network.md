@@ -1,5 +1,7 @@
 # Ağ Katmanı (Network Layer)
 
+![networks](../../image/drawio/folders-network.png)
+
 Bir mobil uygulamada olmazsa olmaz ve doğru yönetilmese çok zor olacağı bir katmandır.Burada ki amacımız bize verilen misal [Json Place Holder](https://jsonplaceholder.typicode.com/) gibi bir servisi alıp doğrudan uygulamamızda çağırıp kullanmak.Tabiki bu katmanda işlemler merkezileştirilip tekrar tekrar veya tek bir noktadan kullanılması düşünülmek üzere planlamalıyız. Benim açıkça en çok değer verdiğim ve önemsediğim katmandır.
 
 > Bu noktaya başlarken sıfırdan yazıp anlattığım gibi bu analttığım yapıyı her projede oluşturmak yerine ortak bir library yapıp pub.dev üzerinde yayınladım isterseniz sizde kullanıp destek verebilirsiniz.

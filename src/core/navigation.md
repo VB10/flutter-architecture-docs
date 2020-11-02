@@ -1,6 +1,7 @@
 # Yönlendirme (Navigation)
 
-![aa](https://assets.materialup.com/uploads/47f1c570-798d-4254-962d-70d732a1c1d4/preview.jpg)
+![navigations](../../image/drawio/folders-navigation.png)
+
 Projelerin hayatında en önemli olan kısımlardan birisidir. Özellikle mobil appte çok sıklıkla kullanıp sayfalar arası veri taşıma veya sayfalardan geçiş animasyonları gibi katmanları burada yapıyoruz.
 
 > Navigasyon işlemi için bir kaç yöntem mevcut ben en iyi yöntem olarak navigation key kullanarak global olarak yönetmeyi seviyorum. Bu yöntemle bir daha contexte ihtyacım olmadan kullanabiliyorum. Aynı şekilde bu değişkene signleton olarak erişebildiğim gibi provider kısmınada ekleyip istediğim anda erişebiliyorum.
