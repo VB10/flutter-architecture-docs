@@ -18,11 +18,14 @@
   - [Saklama(Cache)](src/core/cache.md)
   - [Ağ Katmanı(Network Layer)](src/core/network.md)
 
+- [Ağ Katmanı(Network Layer)](src/core/network.md)
+
 - Ekranlar
 
   - [Geliştirmeler(Features)](themes.md)
   - [Proje Bilenşenleri(Project Widget)](write-a-plugin.md)
   - [MVVM Yapısı(MVVM Structure)](markdown.md)
+  - [Tema Yönetimi](markdown.md)
 
 - Plugin
 - [Mobx](themes.md)
