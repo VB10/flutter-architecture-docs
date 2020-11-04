@@ -1,4 +1,4 @@
-# Uzantılar (Extension)
+# Uzantılar (Extensions)
 
 Bir projeyi en rahatlacak ve kodlarımıza güç katacak kısım tam burası olarak düşünebiliriz.Buradaki amacımız yapılara güç kazandırıp, hem kodsal açıdan avantaj elde etmek hemde fazladan değer katmaktır.
 

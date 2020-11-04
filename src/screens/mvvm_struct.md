@@ -120,6 +120,7 @@ class SplashService extends ISplashService   {
 ---
 
 Ve ana modelimizde hazır daha fazlası için 🥳
+
 [![Mobx](https://img.youtube.com/vi/OxdgMVg6yl0/0.jpg)](https://www.youtube.com/watch?v=OxdgMVg6yl0&t=604s)
 
 [![Mobx](https://img.youtube.com/vi/LSiHLLMBkjQ/0.jpg)](https://www.youtube.com/watch?v=LSiHLLMBkjQ&list=PL1k5oWAuBhgV_XnhMSyu2YLZMZNGuD0Cv&index=12)
