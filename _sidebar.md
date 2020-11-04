@@ -17,20 +17,18 @@
   - [Yönlendirme(Navigation)](src/core/navigation.md)
   - [Saklama(Cache)](src/core/cache.md)
   - [Ağ Katmanı(Network Layer)](src/core/network.md)
+  - [Uzantılar(Extension)](src/core/network.md)
 
-- [Ağ Katmanı(Network Layer)](src/core/network.md)
-
-- Ekranlar
+* Ekranlar
 
   - [Geliştirmeler(Features)](themes.md)
-  - [Proje Bilenşenleri(Project Widget)](write-a-plugin.md)
-  - [MVVM Yapısı(MVVM Structure)](markdown.md)
-  - [Tema Yönetimi](markdown.md)
+  - [MVVM Yapısı(MVVM Structure)](src/screens/mvvm_struct.md)
+  - [Tema Yönetimi](src/screens/theme_generate.md)
 
-- Plugin
-- [Mobx](themes.md)
-- [Provider](themes.md)
-- [Easy Localization](themes.md)
-- [Other](themes.md)
+* Plugin
+* [Mobx](themes.md)
+* [Provider](themes.md)
+* [Easy Localization](themes.md)
+* [Other](themes.md)
 
-- [Changelog](changelog.md)
+* [Changelog](changelog.md)
