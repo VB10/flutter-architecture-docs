@@ -21,14 +21,15 @@
 
 * Ekranlar
 
-  - [Geliştirmeler(Features)](themes.md)
-  - [MVVM Yapısı(MVVM Structure)](src/screens/mvvm_struct.md)
-  - [Tema Yönetimi](src/screens/theme_generate.md)
+  - [Geliştirmeler (Features)](themes.md)
+  - [MVVM Yapısı (MVVM Structure)](src/screens/mvvm_struct.md)
+  - [Tema Yönetimi (Theme Management)](src/screens/theme_generate.md)
+  - [Birim Test (Unit Test)](src/screens/unit-test.md)
 
-* Plugin
-* [Mobx](themes.md)
-* [Provider](themes.md)
-* [Easy Localization](themes.md)
-* [Other](themes.md)
+* Publish
 
-* [Changelog](changelog.md)
+  - [IOS Paket, Market Yönetimi ve Fastlane](themes.md)
+  - [Android Paket,Market Yönetimi ve Fastlane](src/screens/mvvm_struct.md)
+
+- [Referans Projeler](changelog.md)
+- [Teşeküler](changelog.md)

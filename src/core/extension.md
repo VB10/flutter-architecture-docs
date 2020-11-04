@@ -37,4 +37,5 @@ Diyerek hem merkezi hemde sayfalarımızın hepsinde ortak bir padding değeri k
 ---
 
 Ve ana modelimizde hazır daha fazlası için 🥳
-[![Theme Management](https://img.youtube.com/vi/FRStsCaAm_g/0.jpg)](https://www.youtube.com/watch?v=FRStsCaAm_g&list=PL1k5oWAuBhgV_XnhMSyu2YLZMZNGuD0Cv&index=9)
+
+[![Extension](https://img.youtube.com/vi/FRStsCaAm_g/0.jpg)](https://www.youtube.com/watch?v=FRStsCaAm_g&list=PL1k5oWAuBhgV_XnhMSyu2YLZMZNGuD0Cv&index=9)
