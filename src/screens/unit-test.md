@@ -154,6 +154,6 @@ Bu nokta artık projenin en lüks kısmı olmakta çünkü birim testleri ve ser
 
 Ve ana modelimizde hazır daha fazlası için 🥳
 
-[![Mobx](https://img.youtube.com/vi/4mYDEJlbejQ/0.jpg)](https://www.youtube.com/watch?v=4mYDEJlbejQ)
+[![Unit Test](https://img.youtube.com/vi/4mYDEJlbejQ/0.jpg)](https://www.youtube.com/watch?v=4mYDEJlbejQ)
 
-[![Mobx](https://img.youtube.com/vi/1a5VeHQlo0Q/0.jpg)](https://www.youtube.com/watch?v=1a5VeHQlo0Q&list=PL1k5oWAuBhgV_XnhMSyu2YLZMZNGuD0Cv&index=15)
+[![Test](https://img.youtube.com/vi/1a5VeHQlo0Q/0.jpg)](https://www.youtube.com/watch?v=1a5VeHQlo0Q&list=PL1k5oWAuBhgV_XnhMSyu2YLZMZNGuD0Cv&index=15)
