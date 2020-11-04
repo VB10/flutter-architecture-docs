@@ -117,6 +117,9 @@ class SplashService extends ISplashService   {
 
 > Hem videolardan hemde gelecek olan api ve ekran bağlama derslerimde bu kısımları çok daha iyi anlayacaksınız.
 
-https://www.youtube.com/watch?v=OxdgMVg6yl0&t=604s
+---
 
-https://www.youtube.com/watch?v=LSiHLLMBkjQ&list=PL1k5oWAuBhgV_XnhMSyu2YLZMZNGuD0Cv&index=12
+Ve ana modelimizde hazır daha fazlası için 🥳
+[![Mobx](https://img.youtube.com/vi/OxdgMVg6yl0/0.jpg)](https://www.youtube.com/watch?v=OxdgMVg6yl0&t=604s)
+
+[![Mobx](https://img.youtube.com/vi/LSiHLLMBkjQ/0.jpg)](https://www.youtube.com/watch?v=LSiHLLMBkjQ&list=PL1k5oWAuBhgV_XnhMSyu2YLZMZNGuD0Cv&index=12)
