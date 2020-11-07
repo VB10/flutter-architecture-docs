@@ -24,9 +24,9 @@ Konularında profesyonel olarak çalışıyorum ve bunların yanında:
 
 Yazıp, takip eden ve versiyonlama sistemlerini olmadan yaşamayan birisiyim.
 
-> Özellikle daha sayamadğım selenium java s.e gibi react gibi front end dahil olmak üzere yazdım okuyor veya tartışmalarını global seviyede(o bundan iyi çünkü daha hızlıdan ziyade bench marklar projeler kodlarla) takip edip okuyorum.
+> Özellikle daha sayamadğım selenium java s.e gibi react gibi front-end dahil olmak üzere yazdım okuyor veya tartışmalarını global seviyede(o bundan iyi çünkü daha hızlıdan ziyade bench marklar projeler kodlarla) takip edip okuyorum.
 
-Bundan sonraki hayatımdada severek okuyup tüm teknoloji birimlerini takip edip daha çok ürün ve mimarisel geliştirmeler yapıp tüm arkadaşlarıma dostlarıma bir ücret olmadan paylaşmak, gençlere yaşadığımı yaşamamalarını ve daha güçlü olmalarının yolunu açmayı hedefliyorum.
+Bundan sonraki hayatımda da severek okuyup tüm teknoloji birimlerini takip edip daha çok ürün ve mimarisel geliştirmeler yapıp tüm arkadaşlarıma dostlarıma bir ücret olmadan paylaşmak, gençlere yaşadığımı yaşamamalarını ve daha güçlü olmalarının yolunu açmayı hedefliyorum.
 
 Takip etmek isteyenler için şöyle paylaşayım:
 
