@@ -39,7 +39,7 @@ Buradaki klasör yapısında tabiki hemen akla gelen ortak modeller ne olacak bu
 - \_model
   - Burada kullanıcı gibi ürünler gibi ortak kullanılan modellerimi konumlandırıyorum.
 - \_service
-  - Burada ise ortak servislerimi konumlanıdırıp çağırmam gerektiğinde buradan kullanmış oluyorum.
+  - Burada ise ortak servislerimi konumlandırıp çağırmam gerektiğinde buradan kullanmış oluyorum.
 
 ![subs](../../image/features/_subs.png)
 
