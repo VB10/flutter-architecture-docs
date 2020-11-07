@@ -2,13 +2,13 @@
 
 ![folders](../../image/drawio/folders.png)
 
-Bir çok projede ilk başlanılan nokta bence burasıdır. Bu noktada projenin gelişmesini ve gideceği noktanın basit ama en önemli yeri diyebilirim.
+Birçok projede ilk başlanılan nokta bence burasıdır. Bu noktada projenin gelişmesini ve gideceği noktanın basit ama en önemli yeri diyebilirim.
 
-Flutter projelerine gelecek olursak bir kaç önemli nokta var. Birden çok projede kullanmak ve içerisinde çok az iş(business) kodumuzun bulunduğu kısım olarak düşünebilirsiniz
+Flutter projelerine gelecek olursak birkaç önemli nokta var. Birden çok projede kullanmak ve içerisinde çok az iş(business) kodumuzun bulunduğu kısım olarak düşünebilirsiniz
 
 Bu katman sayesinde biz projenin asıl hatlarını belirleyip yolunu çizmiş oluyoruz.
 
-!> Gördüğüm en büyük hata bir yöntemi misal [bloc](https://pub.dev/packages/bloc), [redux](https://pub.dev/packages/redux) veya [mobx](https://pub.dev/packages/mobx) örneklerini inceleyip bunlara göre bir mimari yapmaya çalışmak. Burada dikkatli olmalıyız. Bizim gördüklerimiz sadece örnek bunları kendi katmanlarımıza dahil edebilirsek tüm yönetim bize geçecektir.
+> Gördüğüm en büyük hata bir yöntemi misal [bloc](https://pub.dev/packages/bloc), [redux](https://pub.dev/packages/redux) veya [mobx](https://pub.dev/packages/mobx) örneklerini inceleyip bunlara göre bir mimari yapmaya çalışmak. Burada dikkatli olmalıyız. Bizim gördüklerimiz sadece örnek bunları kendi katmanlarımıza dahil edebilirsek tüm yönetim bize geçecektir.
 
 ## Ana Katman (Core)
 
@@ -18,7 +18,7 @@ Dediğim gibi bu katman bizim asıl iş yapacak işleri yönetecek veya yapılac
 
 İçerisinde tüm sayfalara eşlik edecek modellerimi ekliyorum bununla birlikte view ve state gibi öncülük edecek katmanlarım burada.
 
-Örneğin tüm sayfalarımın bir iş yapan katmanı (View-Model) için bir base yapısını burada tanımalamak ve tekrar tekrar bu özelikleri yapmamak ve yönetimi artırmak olarak düşünebilirsiniz.
+Örneğin tüm sayfalarımın bir iş yapan katmanı (View-Model) için bir base yapısını burada tanımlamak, tekrar tekrar bu özelikleri yapmamak ve yönetimi artırmak olarak düşünebilirsiniz.
 
 ```dart
 abstract class BaseViewModel {
@@ -63,7 +63,7 @@ Hazırlayıp bu normal button widgetini istediğim projede çıkartıp kullanabi
 
 ##### Sabitler ve Uzantılar
 
-Özellikle sabit değerlerimiz(constants) ve uzantılar(extension) projenin en üst düzeyinde tanımlanmalıki bu değerler proje boyunca manupüle edilemesin veya üzerine bir şey koyacağımız zaman tekrar düşünülsün.
+Özellikle sabit değerlerimiz(constants) ve uzantılar(extension) projenin en üst düzeyinde tanımlanmalı ki bu değerler proje boyunca manupüle edilemesin veya üzerine bir şey koyacağımız zaman tekrar düşünülsün.
 
 Örnek verecek olursam misal projenin hayatında hep sabit olacak ve değişmesi mümkün olmayacak değerleri bu şekilde saklıyorum.
 
@@ -76,11 +76,11 @@ class ApplicationConstants {
 }
 ```
 
-> Burada normal bir tanımlama yaparken [magic number](https://help.semmle.com/wiki/display/JAVA/Magic+numbers#:~:text=A%20magic%20number%20is%20a,for%20other%20programmers%20to%20understand.) mantığını uyguluyorum ama diyelim ki proje hayatında sıklıkca kullanacağım bir değer var bunuda [lazy veya eager singleton](https://www.journaldev.com/1377/java-singleton-design-pattern-best-practices-examples) deseni ile sarmalıyorum.
+> Burada normal bir tanımlama yaparken [magic number](https://help.semmle.com/wiki/display/JAVA/Magic+numbers#:~:text=A%20magic%20number%20is%20a,for%20other%20programmers%20to%20understand.) mantığını uyguluyorum ama diyelim ki proje hayatında sıklıkça kullanacağım bir değer var bunuda [lazy veya eager singleton](https://www.journaldev.com/1377/java-singleton-design-pattern-best-practices-examples) deseni ile sarmalıyorum.
 
 ##### Yükleme Alanı(Init)
 
-Bu katmanı tek tek inceleyeceğiz ama klasör mantığındaki çok önemli bir yer tutuyor. Özellikle iş katmanlarının saklama, yönlendirme, tema, dil gibi bir çok nokta burada hayatına başlıyor ve buradan çağrılmaya başlanıyor.
+Bu katmanı tek tek inceleyeceğiz ama klasör mantığındaki çok önemli bir yer tutuyor. Özellikle iş katmanlarının saklama, yönlendirme, tema, dil gibi birçok nokta burada hayatına başlıyor ve buradan çağrılmaya başlanıyor.
 
 > Bu katman biraz iş kuralı içerebilir ama sorun teşkil etmez asıl olayımız burada onların temelini hazırlamaktır.
 
@@ -124,13 +124,13 @@ Diyelim ki en bilindik giriş(login) işlemi yapacağım ve girişten sonrada ü
 
 ##### Proje Özel Katman(\_widget,\_model etc.)
 
-Burada ben projenin genelinde kullanacağımız ve ana mimariyi ilgilendirmeyen sadece projenin kullanacağı katmanı tanımlıyorum. Örneğin kullanıcımız(user) proje boyu her yerde olabilir veya projenin harita modülü olabilir buda her zaman kullanılacak diye düşünürsek bunu core altına değil bu katmanda tanımlıyorum.
+Burada ben projenin genelinde kullanacağımız ve ana mimariyi ilgilendirmeyen sadece projenin kullanacağı katmanı tanımlıyorum. Örneğin kullanıcımız(user) proje boyu her yerde olabilir veya projenin harita modülü olabilir bu da her zaman kullanılacak diye düşünürsek bunu core altına değil bu katmanda tanımlıyorum.
 
-> Projelerimde genelde basitten karmaşığa doğru bir mimari belirlerim. Bu mimari sırası mvc-mvvm-clean arch olarak gidiyor. Bu tarz bir proje için hemde hızlı olmaı için mvvm tercih ettim.
+> Projelerimde genelde basitten karmaşığa doğru bir mimari belirlerim. Bu mimari sırası mvc-mvvm-clean arch olarak gidiyor. Bu tarz bir proje için hem de hızlı olmaı için mvvm tercih ettim.
 
 ![Project folder](../../image/core/view_core.png)
 
-Bir örnek verecek olursak giriş widget'imiz olsun ve basıldığında bize başarılı olan bir seneryomuz ile dönüş yapmış olsun.
+Bir örnek verecek olursak giriş widget'imiz olsun ve basıldığında bize başarılı olan bir senaryomuz ile dönüş yapmış olsun.
 
 ```dart
 class MVVMLoginButton extends StatelessWidget {
