@@ -2,7 +2,7 @@
 
 ![Android Publish](../../image/drawio/folders-googlePlay.png)
 
-Artık uygulamamızın mimarisini yazıp başlayıp bitirdik ve marketlerde görmek istiyoruz.Burada Android tarafı için yapmamız gereken süreçler ve bu süreçler sonunda Google Play Store tarafında görmüş olacağız.
+Artık uygulamamızın mimarisini yazıp, başlayıp, bitirdik ve marketlerde görmek istiyoruz.Burada Android tarafı için yapmamız gereken süreçler ve bu süreçler sonunda Google Play Store tarafında görmüş olacağız.
 
 Peki Süreçler:
 
@@ -16,17 +16,17 @@ Peki Süreçler:
 
 Biz bu mimari serisinde fastlane üzerinden daha çok gittik ama ilk sıfırdan nasıl bu süreçler olur merak edenler [**bu içerikten**](https://www.youtube.com/watch?v=RiuyVxte5vw) videoyu izleyip öğrenebilir.
 
-> Google Play son süreçlerde artık daha fazla dikkat ederek paketleri kontrol edip çıkmaya çalışıyor. Test için attığınız ilk paketin bir kaç gün sonra görmeniz mümkün olabilir.
+> Google Play son süreçlerde artık daha fazla dikkat ederek paketleri kontrol edip çıkmaya çalışıyor. Test için attığınız ilk paketin birkaç gün sonra görmeniz mümkün olabilir.
 
 > Canlı yayına geçerken ekran görüntüleri dahil olmak üzere her şeye takıyorlar.Ben genelde [buradan](https://www.appstorescreenshot.com/) yapıyorum siz de seçebilirsiniz.
 
 > Uygulamanızı çıkarken muhakkak önce internal test açıp ardından beta ve en son canlıya şeklinde gitmeyi unutmayın.
 
-Paketi çıkma işleminde ya manuel yöntemler videoda anlattığım gibi yada şimdi anlatacağım fastlane gibi otomasyonlar ile doğrudan paketinizi canlıya çıkabilirsiniz.Bunun dışında paketinizi release modda çıkmış olmanız önemlidir.
+Paketi çıkma işleminde ya manuel yöntemler videoda anlattığım gibi ya da şimdi anlatacağım fastlane gibi otomasyonlar ile doğrudan paketinizi canlıya çıkabilirsiniz.Bunun dışında paketinizi release modda çıkmış olmanız önemlidir.
 
 ## Fastlane
 
-Fastlane bizim için ara tüm işlemleri yapan kocaman bir app distribition uygulamasıdır.İçinde envayi çeşit yöntem ile paketimizi tek tuşla çıkma imkanı sunar.
+Fastlane bizim için ara tüm işlemleri yapan kocaman bir app distribution uygulamasıdır.İçinde envayi çeşit yöntem ile paketimizi tek tuşla çıkma imkanı sunar.
 
 Bu paketlerden bazıları:
 
@@ -52,7 +52,7 @@ Buradaki amacımız bir hat kurarak işlemleri yapmasını sağlayıp markete do
   end
 ```
 
-Bakın burada marketten ilgili son paketin numarasını alıp bir artırıp bununla paket çıkıp doğrudan test flighta atıyor.Yorum satırı eğer yapsaydık doğrudan slack kanalınıza linki atıp teste hazırım diyebilirdi.
+Bakın burada marketten ilgili son paketin numarasını alıp bir artırıp bununla paket çıkıp doğrudan test flight'a atıyor.Yorum satırı eğer yapsaydık doğrudan slack kanalınıza linki atıp teste hazırım diyebilirdi.
 
 Burdan sonrasında fastlane size verdiği nimetleri kullanarak kendi kurallarınıza göre yapacaksınız.
 
@@ -76,7 +76,7 @@ Buradaki gibi misal kendi kullandığım bir projede hazırlayıp kullanıcı fa
 
 ---
 
-Ve ana modelimizde hazır daha fazlası için 🥳
+Ve ana modelimiz de hazır daha fazlası için 🥳
 
 [![Mobx](https://img.youtube.com/vi/RiuyVxte5vw/0.jpg)](https://www.youtube.com/watch?v=RiuyVxte5vw)
 
