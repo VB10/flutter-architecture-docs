@@ -2,13 +2,13 @@
 
 ![theme](../../image/drawio/themes.png)
 
-Tema konusu flutter da çok önemli bir yer tutuyor. Özellikle flutter'in bize vermiş olduğu en büyük güçlerden olan tema karanlık(dark) ve aydınlık(light) özelliği bize ilk olarak verilmekte.
+Tema konusu flutter da çok önemli bir yer tutuyor. Özellikle flutter'in bize vermiş olduğu en büyük güçlerden olan tema karanlık(dark) ve aydınlık(light) özelliği bize ilk olarak verilmektedir.
 
 ```dart
 MaterialApp(theme: ThemeData.dark()) // ThemeData.light()
 ```
 
-Örnekteki şekilde görebilirsiniz. Bizim yapacağımız adımla bu tema değişimini proje çalışrıken yapmayı sağlayacağız.
+Örneğini yukarıdaki şekilde görebilirsiniz. Bizim yapacağımız adımla bu tema değişimini proje çalışırken yapmayı sağlayacağız.
 
 > Flutter bizim için ilk halinde bir [tema](https://flutter.dev/docs/cookbook/design/themes) sunuyor projelerimizde elle değer vermek yerine bu temayı kullanarak adım atabiliriz.
 
@@ -19,13 +19,13 @@ Bunu yapmak yerine;
 
 `Text("VB",style:Theme.of(context).textTheme.headline5)`
 
-Bu yapıyı kullanmak çok önemli isterseniz [panache](https://rxlabz.github.io/panache/#/) kullanarak kendi temanızı oluşutabilirsiniz bu konuda [bu içeriğe de göz](https://www.youtube.com/watch?v=Eve_oMoH_WM) atabilirsiniz..
+Bu yapıyı kullanmak çok önemli isterseniz [panache](https://rxlabz.github.io/panache/#/) kullanarak kendi temanızı oluşturabilirsiniz bu konuda [bu içeriğe de göz](https://www.youtube.com/watch?v=Eve_oMoH_WM) atabilirsiniz..
 
-Şimdi gelelim asıl işimize bu tema nasıl olacakta proje boyunca değişecek işte o noktada flutter projelerinde en çok kullanılan [provider](https://pub.dev/packages/provider) paketinden yararlanacağız.
+Şimdi gelelim asıl işimize bu tema nasıl olacak ve proje boyunca değişecek işte o noktada flutter projelerinde en çok kullanılan [provider](https://pub.dev/packages/provider) paketinden yararlanacağız.
 
-> Provider konusu state yönetimi dersindede işleyeceğim ama özetle bilmeniz gereken provider bizim için proje en üstünde saklamak veya anlık değişlikler yapmak istediğimiz noktlarda kolayca erişme imkanı sunan bir paket.
+> Provider konusu state yönetimi dersinde de işleyeceğim ama özetle bilmeniz gereken provider bizim için proje en üstünde saklamak veya anlık değişlikler yapmak istediğimiz noktalarda kolayca erişme imkanı sunan bir paket.
 
-Burada ana amacımız bir teme sınıfı oluşturup bunu provider objemiz ile tanımlamak ve artık geri kalanını ona bırakmak olacak.
+Burada ana amacımız bir tema sınıfı oluşturup bunu provider objemiz ile tanımlamak ve artık geri kalanını ona bırakmak olacak.
 
 Bir ThemeNotifier sınıfı oluşturuyor ve bu sınıfı ChangeNotifier dan türeterek bu sınıfın objelerine dinleyenlere anlık değişimlerde kendilerini yenileme haberi veriyoruz.
 
@@ -35,7 +35,7 @@ Ardından ilgili sınıfımzda şuanki temamızı tutan bir değişken tanımlı
 
 `ThemeData _currentTheme = AppThemeLight.instance.theme;`
 
-Son olarak yapmamız gereken bu sınıftan türeyenlere değişikleri haber verecek kısımda
+Son olarak yapmamız gereken bu sınıftan türeyenlere değişikleri haber verecek kısım da
 
 ```dart
  void changeValue(AppThemes theme) {
@@ -48,7 +48,7 @@ Son olarak yapmamız gereken bu sınıftan türeyenlere değişikleri haber vere
   }
 ```
 
-!> Bu kısımda ben cache yapımıda dahil edip değişiklikleri telefon hafızasında tutuyorum.İlk açılıdığı anda değeri oradan tanımlayıp bu sayede son değişiklikle tekrar çalıştırmış oluyorum.
+> Bu kısımda ben cache yapımı da dahil edip değişiklikleri telefon hafızasında tutuyorum.İlk açıldığı anda değeri oradan tanımlayıp bu sayede son değişiklikle tekrar çalıştırmış oluyorum.
 
 Tema değişikliği özelliğimiz hazır yapmamız gereken bu değeri provider kısmında tanımlamak.
 
