@@ -2,28 +2,28 @@
 
 ![cache](../../image/drawio/folders-cache.png)
 
-Veri konusu özellikle mobil uygulamada en önemli noktlaradan birisi değil takendisidir çünkü uygulamamız canlıya çıktığında(ilgili marketler de yayına girdiği an) eğer bir güvenlik testine girerse ilk baktıkları nokta uygulamnın cihaz içindeki verileri nerede ve nasıl tuttuğudur. Peki bu veriler nedir:
+Veri konusu özellikle mobil uygulamada en önemli noktalardan birisi değil ta kendisidir çünkü uygulamamız canlıya çıktığında(ilgili marketler de yayına girdiği an) eğer bir güvenlik testine girerse ilk baktıkları nokta uygulamanın cihaz içindeki verileri nerede ve nasıl tuttuğudur. Peki bu veriler nedir:
 
 1. Kullanıcının kimlik bilgileri(token,id vb)
 2. Uygulamanın verileri
 3. Az sıklıkla kullanılacak servisden gelen bilgiler(iller, kan grupları vb.)
 
-Tabiki liste uzar gider. Biz bu verileri mobil uygulamalarda yine bir kaç yöntem ile saklayabiliriz:
+Tabiki liste uzar gider. Biz bu verileri mobil uygulamalarda yine birkaç yöntem ile saklayabiliriz:
 
 - Key-Value([Shared](https://developer.android.com/reference/android/content/SharedPreferences),[UserDefaults](https://developer.apple.com/documentation/foundation/userdefaults))
 - File (Doğrudan bir json veya txt dosyasına yazmak)
 - [SQLite](https://www.sqlite.org/index.html) (Mobil telefonlar için basit sql database)
 - [Core Data ](https://developer.apple.com/documentation/coredata)(Sadece IOS Framework'ü destekleyen bir database mimarisi)
 
-Ve bir kaç özel platform dahilindeki çözümler ile bize saklama imkanı sunuyor. Basit veriler saklamak için en sevdiğim çözüm ise shared yapısı.
+Ve birkaç özel platform dahilindeki çözümler ile bize saklama imkanı sunuyor. Basit veriler saklamak için en sevdiğim çözüm ise shared yapısı.
 
-Burada verilerin saklandığı yerde önemli bir notka. Bu noktada elimizde uygulama içinde kullancının direk erişemediği alan ve telefonun içine kaydetmek üzere alanlar bulunmaktadır.
+Burada verilerin saklandığı yerde önemli bir nokta. Bu noktada elimizde uygulama içinde kullancının direk erişemediği alan ve telefonun içine kaydetmek üzere alanlar bulunmaktadır.
 
-!> Özellikle bu verileri saklamalardan hangisini seçerseniz seçin bir şekilde telefon rootlanarak güvenlik şirketleri tarafından teste sokulup sakladığınız veriler erişip buradan sizin zaafiyetinizi bulabilirler. Bundan ötürü şimdiki yazacağımız cache katmanı önemli ve isterseniz bir kaç özellik katarak bazı verileri kullacının bilgilerini şifreleyebilir ve bu sayede güvenliğinizi artırabilirsiniz.
+ Özellikle bu verileri saklamalardan hangisini seçerseniz seçin bir şekilde telefon rootlanarak güvenlik şirketleri tarafından teste sokulup sakladığınız veriler erişip buradan sizin zaafiyetinizi bulabilirler. Bundan ötürü şimdiki yazacağımız cache katmanı önemli ve isterseniz birkaç özellik katarak (bazı verileri kullanarak) kullanıcının bilgilerini şifreleyebilir ve bu sayede güvenliğinizi artırabilirsiniz.
 
-[Shared Preferences](https://pub.dev/packages/shared_preferences) yani key-value kullanacağım yapıda saklamak için bir kaç özel ekleme yapıyor ve bu proje boyunca kullanacağım için bir eager singleton pattern kullanarak bu değeri bir kere üretip devam ettiriyorum.
+[Shared Preferences](https://pub.dev/packages/shared_preferences) yani key-value kullanacağım yapıda saklamak için birkaç özel ekleme yapıyor ve bu proje boyunca kullanacağım için bir 'eager singleton pattern' kullanarak bu değeri bir kere üretip devam ettiriyorum.
 
-[Bu yazımda](https://medium.com/flutter-community/cache-manager-with-flutter-5a5db0d3a3e6) projede özellikle bu cache katmanını bir kaç kalemde ele alıp [strategy pattern](https://refactoring.guru/design-patterns/strategy) kullanarak detay bir şekilde ele aldım.
+[Bu yazımda](https://medium.com/flutter-community/cache-manager-with-flutter-5a5db0d3a3e6) projede özellikle bu cache katmanını birkaç kalemde ele alıp [strategy pattern](https://refactoring.guru/design-patterns/strategy) kullanarak detay bir şekilde ele aldım.
 
 ```dart
 class LocaleManager {
@@ -34,7 +34,7 @@ class LocaleManager {
 }
 ```
 
-Burada ilk sınıf oluşurken [SharedPreferences](https://www.youtube.com/watch?v=aV4eLUTPSUM) değerinin bir oluşması gerekiyor.(Asenkron bir istek bu değeri ilk sınıf oluşruken çağırıyoruz ama dediğim gibi bir asenkron olmaa durumu olduğu için değerin tam olarak almama durumu mevcut.).
+Burada ilk sınıf oluşurken [SharedPreferences](https://www.youtube.com/watch?v=aV4eLUTPSUM) değerinin bir oluşması gerekiyor.(Asenkron bir istek, bu değeri ilk sınıf oluşurken çağırıyoruz ama dediğim gibi bir asenkron olma durumu olduğu için değerin tam olarak almama durumu mevcut.).
 
 ```dart
   LocaleManager._init() {
@@ -44,7 +44,7 @@ Burada ilk sınıf oluşurken [SharedPreferences](https://www.youtube.com/watch?
   }
 ```
 
-Bu durumu önlemek için bir şöyle bir çözüm getirip kesin bir şekilde değerin verilmiş olmasını sağlıyorum.
+Bu durumu önlemek için şöyle bir çözüm getirip kesin bir şekilde değerin verilmiş olmasını sağlıyorum.
 
 ```dart
   static prefrencesInit() async {
@@ -66,7 +66,7 @@ Future<void> main() {
 }
 ```
 
-Ve hazırız artık shared değerimiz elimizde hazır. Şimdi ben projelerimde şu şekil de gidiyorum:
+Ve hazırız artık shared değerimiz elimizde hazır durumda. Şimdi ben projelerimde şu şekilde gidiyorum:
 
 - [Key - value](https://www.youtube.com/watch?v=aV4eLUTPSUM) yapısı olduğu için key değerini adamın elle vermemesi için enum istiyorum ve gelen enumun değerini toString diyerek key yapıyorum.
 - İlgili metodları ben kendim tekrar yazıyorum.(setStringValue ,setBoolValue)
@@ -84,7 +84,7 @@ Ve hazırız artık shared değerimiz elimizde hazır. Şimdi ben projelerimde �
       _preferences.getString(key.toString()) ?? "";
 ```
 
-Paramtre olarak istenilen ise bir enum olup her yeni değer saklamak istediğimizde buraya paramtre olarak ekleyeceğiz.
+Parametre olarak istenilen ise bir enum olup her yeni değer saklamak istediğimizde buraya parametre olarak ekleyeceğiz.
 
 ```dart
 enum PreferencesKeys {
