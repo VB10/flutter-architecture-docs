@@ -1,5 +1,7 @@
 # Klasör Yapısı
 
+![folders](../../image/drawio/folders.png)
+
 Bir çok projede ilk başlanılan nokta bence burasıdır. Bu noktada projenin gelişmesini ve gideceği noktanın basit ama en önemli yeri diyebilirim.
 
 Flutter projelerine gelecek olursak bir kaç önemli nokta var. Birden çok projede kullanmak ve içerisinde çok az iş(business) kodumuzun bulunduğu kısım olarak düşünebilirsiniz
@@ -161,4 +163,5 @@ Burada yukarıda bahsettiğim gibi view, view-model, model, service olarak ayrı
 ---
 
 Bu yazıyı buradan incleyebilirsiniz 🥳
+
 [![IMAGE ALT TEXT HERE](https://img.youtube.com/vi/Xn8q9ywXKDc/0.jpg)](https://www.youtube.com/watch?v=Xn8q9ywXKDc&list=PL1k5oWAuBhgV_XnhMSyu2YLZMZNGuD0Cv)
