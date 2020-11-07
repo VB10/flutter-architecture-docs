@@ -1,4 +1,4 @@
-# Destek Verenler
+# Gönüllü Takımımız
 
 ## Beyza 
 ![alt](../../image/core/view_core.png)
