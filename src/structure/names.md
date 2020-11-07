@@ -66,7 +66,7 @@ Yine burada en iyi kullanım olarak [camel case pattern ](https://www.geeksforge
 
 ## Değişkenler ve Sabitler
 
-Yine çok fazla önemi olan bir konuya geldik. Burada tercih de var ama tabiki lint kuralları da göz önüne alınarak seçimler var.
+Yine çok fazla önemli olan bir konuya geldik. Burada tercih de var ama tabiki lint kuralları da göz önüne alınarak seçimler var.
 
 - Proje boyunca değişmeyecek ve değerini bir çok yerde kullanacağımız bir değişkene ihtiyacımız varsa "[Magic Number](https://help.semmle.com/wiki/display/JAVA/Magic+numbers#:~:text=A%20magic%20number%20is%20a,for%20other%20programmers%20to%20understand.)" tercih ediyorum.
 
