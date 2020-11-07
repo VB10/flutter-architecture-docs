@@ -1,15 +1,16 @@
 <!-- _coverpage.md -->
 
-![logo](_media/icon.svg)
+![logo](https://yt3.ggpht.com/a/AATXAJyul3hpzl86GIjF-EZxBzy6T62PJxpvzRwz9AbUOw=s176-c-k-c0x00ffffff-no-rj-mo)
 
-# docsify <small>3.5</small>
+# Flutter Uygulama Mimarisi <small>1.0.0</small>
 
-> Baştan sona bir flutter ile architecture uygulaması geliştirme
+> Bir mobil uygulamanın tüm süreçlerini tek tek ele alıp ardından çözümleriyle birlikte işliyoruz.
 
-- Bir mobil appte olması gereken tüm modüller
+- Mobil uygulama prensibleri, klasörleme.
 - Yapısal geliştirmeler
-- Network Cache ve bir çok katman.
-- State Management tools.
+- Ağ istekleri, yerel veri saklama katmanları.
+- Durum(State) yönetimi ve paylaşımı.
+- Uygulamaları market süreçleri
 
-[GitHub](https://github.com/docsifyjs/docsify/)
+[GitHub](https://github.com/VB10/flutter-architecture-template)
 [Get Started](#docsify)

@@ -31,5 +31,5 @@
   - [IOS Paket, Market Yönetimi ve Fastlane](themes.md)
   - [Android Paket,Market Yönetimi ve Fastlane](src/screens/mvvm_struct.md)
 
-- [Referans Projeler](changelog.md)
-- [Teşeküler](changelog.md)
+- [Referans Projeler](image/drawio/folders-projects.png)
+- [Biraz da Ben](src/support/me-about.md)
