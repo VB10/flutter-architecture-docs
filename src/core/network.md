@@ -2,9 +2,9 @@
 
 ![networks](../../image/drawio/folders-network.png)
 
-Bir mobil uygulamada olmazsa olmaz ve doğru yönetilmese çok zor olacağı bir katmandır.Burada ki amacımız bize verilen misal [Json Place Holder](https://jsonplaceholder.typicode.com/) gibi bir servisi alıp doğrudan uygulamamızda çağırıp kullanmak.Tabiki bu katmanda işlemler merkezileştirilip tekrar tekrar veya tek bir noktadan kullanılması düşünülmek üzere planlamalıyız. Benim açıkça en çok değer verdiğim ve önemsediğim katmandır.
+Bir mobil uygulamada olmazsa olmaz ve doğru yönetilmesse çok zor olacağı bir katmandır.Burada ki amacımız bize verilen misal [Json Place Holder](https://jsonplaceholder.typicode.com/) gibi bir servisi alıp doğrudan uygulamamızda çağırıp kullanmak.Tabii ki bu katmanda işlemler merkezileştirilip tekrar tekrar veya tek bir noktadan kullanılması düşünülmek üzere planlamalıyız. Benim açıkça en çok değer verdiğim ve önemsediğim katmandır.
 
-> Bu noktaya başlarken sıfırdan yazıp anlattığım gibi bu analttığım yapıyı her projede oluşturmak yerine ortak bir library yapıp pub.dev üzerinde yayınladım isterseniz sizde kullanıp destek verebilirsiniz.
+> Bu noktaya başlarken sıfırdan yazıp anlattığım gibi bu anlattığım yapıyı her projede oluşturmak yerine ortak bir library yapıp pub.dev üzerinde yayınladım isterseniz sizde kullanıp destek verebilirsiniz.
 
 [**\*Vexana\*\***](https://pub.dev/packages/vexana) network servis hizmeti veren bir paket.
 
@@ -20,11 +20,11 @@ Peki gelin önce konuşalım bir servis katmanında neler olur neler olmalı:
 - Servis istekleriniz de diyelim ki kullanıcı giriş yaptıysa token datasının gitmesini istiyorsunuz bunu ana servis katmanınızda halledebilirsiniz.
 - Servisinizden gelen hatalara göre misal 401 uygulamınızda refresh yapısı kurgulayıp kullanıcı hiç anlamadan onu tekrar devam ettirebilirsiniz.
 
-Yukarıdaki tüm başlıkları vexana paketinde bulabilirsiniz. Tabiki daha farklı çözümler veya katmanlarda olabilir ama benim gördüğüm bu başlıklara çok rahat uygulamanızı yönetir ve rahatlıkla testlerinizi yazıp çok rahat geliştirmeye devam edersiniz.
+Yukarıdaki tüm başlıkları vexana paketinde bulabilirsiniz.Tabii ki daha farklı çözümler veya katmanlarda olabilir ama benim gördüğüm bu başlıklarla çok rahat uygulamanızı yönetir ve rahatlıkla testlerinizi yazıp çok rahat geliştirmeye devam edersiniz.
 
-!> Bu yazdığımız başlıkların merkezi bir katmanda değil her istekte yapıldığını düşündüğümüzde ne kadar zor ve yönetiminin neredeyse imkansız olduğunu görebilirsiniz.
+> Bu yazdığımız başlıkların merkezi bir katmanda değil her istekte yapıldığını düşündüğümüzde ne kadar zor ve yönetiminin neredeyse imkansız olduğunu görebilirsiniz.
 
-> Bu servis konusunda ele aldığım [5 Dakikada Firebase](https://medium.com/hardwareandro/5-minutes-firebase-rest-service-c990c1f70031) ile servis geliştimre yazımı inceleyebilir konuyu tam olarak kullanıp demo uygulamlarınız için hızlıca geliştirebilirsiniz.
+> Bu servis konusunda ele aldığım [5 Dakikada Firebase](https://medium.com/hardwareandro/5-minutes-firebase-rest-service-c990c1f70031) ile servis geliştirme yazımı inceleyebilir konuyu tam olarak kullanıp demo uygulamalarınız için hızlıca geliştirebilirsiniz.
 
 Şimdi ben doğrudan flutterin vermiş olduğu ağ özellikleri ile yapabilirdim fakat bu tarz ağ katmanlarının ilk kısımlarını genelde topluluklarının çok kullandığını tercih edip üzerine kendi fikirlerimi ekliyorum. Flutter tarafında en çok kullanılan benim gördüğüm:
 
@@ -55,13 +55,13 @@ class CoreDio with DioMixin implements Dio, ICoreDio {
 InterceptorsWrapper(onError:,onResponse:,onRequest:)
 ```
 
-[Burada yaptığım](https://github.com/VB10/WhatsApp-Chat) bir örnekte misal requestlerimin hepsinin sonuna .json eklemeyi yapmıştım sadece bir düşünce olarak devam edebilirsiniz.
+[Burada yaptığım](https://github.com/VB10/WhatsApp-Chat) bir örnekte requestlerimin hepsinin sonuna .json eklemeyi yapmıştım sadece bir düşünce olarak devam edebilirsiniz.
 
-Şimdi yazacağımız en önemli katman ise burasıdır.Burada yazacağımız fetch methodu tüm istekleri yönetip snonuçlara göre kullanıcıya haber verecektir.
+Şimdi yazacağımız en önemli katman ise burasıdır.Burada yazacağımız fetch methodu tüm istekleri yönetip sonuçlara göre kullanıcıya haber verecektir.
 
 ### BaseModel
 
-Flutter projelerinde çok sıklıkça göreceğiniz toJson ve fromJson methodlarıdır.Bu methodlar gelen jsonu parse etmek ve var olan modeli json yapmak içindir.Base Model ile şunu diyorum kullanıcıya:
+Flutter projelerinde çok sıklıkla göreceğiniz toJson ve fromJson methodlarıdır.Bu methodlar gelen jsonu parse etmek ve var olan modeli json yapmak içindir.Base Model ile şunu diyorum kullanıcıya:
 **Eyy kullanıcı bu modeli kafana göre veremezsin, ben senin parse işlemini yapacağım bunun için baseModelden türemek zorundadır.**
 
 ```dart
@@ -71,15 +71,15 @@ abstract class BaseModel<T> {
 }
 ```
 
-Ve bu tanımladan sonra fetch metodumdaki ilk kısım anlamlanmış oluyor.
+Ve bu tanımlamadan sonra fetch metodumdaki ilk kısım anlamlanmış oluyor.
 `Future<IResponseModel<R>> fetch<R, T extends BaseModel>`
 
-Peki bu IResponseModel ne yapıyor derseniz buda aynı basemodel gibi çalışıyor farkı kullanıcı ne isterse onu verip üzerine kendim oluşturduğum yapıya göre dönüyor.
+Peki bu IResponseModel ne yapıyor derseniz bu da aynı basemodel gibi çalışıyor farkı kullanıcı ne isterse onu verip üzerine kendim oluşturduğum yapıya göre dönüyor.
 
-Yani diyeliki User modeli istiyorsunuz sadece demeniz gereken:
-`CoreDio.fetch<User,User>` peki neden iki defa user dedik diyecek olabilirsiniz buradaki amaç şu ilk verdiğiniz paramatere dönecek olan tip ikinci parametre ise o tipin parse olacağı model.
+Yani diyelim ki User modeli istiyorsunuz sadece demeniz gereken:
+`CoreDio.fetch<User,User>` peki neden iki defa user dedik diyecek olabilirsiniz buradaki amaç şu ilk verdiğiniz parametre dönecek olan tip ikinci parametre ise o tipin parse olacağı model.
 
-Siz bir List<User> da isteyebilirdiniz `CoreDio.fetch<List<User>,User>` şeklinde çağırabileceksiniz. Bu konuyu özellikle yaklaşık bir buçuk saatlik videoda ele aldım yazının sonunda orada da dinleyip anlayacaksınız.
+Siz bir List<User> isteyebilirdiniz `CoreDio.fetch<List<User>,User>` şeklinde çağırabileceksiniz. Bu konuyu özellikle yaklaşık bir buçuk saatlik videoda ele aldım yazının sonunda orada da dinleyip anlayacaksınız.
 
 > Bu T ler R ler generic kullanımdır kullanıcın verdiği değere göre şekillenirler [buradan](https://docs.microsoft.com/en-us/dotnet/csharp/programming-guide/generics/generic-type-parameters) bu konun detayını incleyebilirsiniz.
 
@@ -119,7 +119,7 @@ Yapmak istediğim gelen sonuç 200 ve 201 ise başarılı görüp servisten gele
 
 Diyelim ki cevap başarısız bu projede geriye base error dönüp ekranda bunu gösteriyorum.
 
-Peki \_responseParser ne yapıyor diye düşünürsek; buda çok basitce gelen veriyi list mi map mi yoksa ilkel bir verimi diye bakıp işlemini yapıp geriye döndürüyor.
+Peki \_responseParser ne yapıyor diye düşünürsek bu da çok basitce gelen veriyi list mi map mi yoksa ilkel bir veri mi diye bakıp işlemini yapıp geriye döndürüyor.
 
 ```dart
  R _responseParser<R, T>(BaseModel model, dynamic data) {
@@ -154,7 +154,7 @@ Ve artık katmanımız hazır ya k[ullanmak isteseydik](https://github.com/VB10/
     if (response.error != null) {showMessage(response.error.message)}
 ```
 
-Ve çok basitçe ve çok güzel bir şekilde mimarimiz hazır. Bırakacağım bu iki içerikle konuları iyice çözebilir ve kendi düşüncenize göre yapabilirsiniz.
+Çok basit ve güzel bir şekilde mimarimiz hazır. Bırakacağım bu iki içerikle konuları iyice çözebilir ve kendi düşüncenize göre yapabilirsiniz.
 
 | Konular                 | Açıklama                                                                                                                                                          |
 | ----------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------- |

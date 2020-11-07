@@ -2,13 +2,13 @@
 
 ![state](../../image/drawio/folders-state-management.png)
 
-Öncelikle state dediğimiz kavram olay durum veya küçük bir hayat olarak düşünebiliriz. Bu kadar önemli tutan şey ise doğru bir yapı kurgulanması yönetimini kolaylaştırdığı gibi kompleks projelerde size ilgili yapı(framework) verdiği saf haliyle gitmek ilerledikçe karmaşa ve bazı performans sorunlarıda açacaktır.
+Öncelikle state dediğimiz kavramı olay, durum veya küçük bir hayat olarak düşünebiliriz. Bu kadar önemli tutan şey ise doğru bir yapı kurgulanması yönetimini kolaylaştırdığı gibi kompleks projelerde size ilgili yapı(framework) verdiği saf haliyle gitmek ilerledikçe karmaşa ve bazı performans sorunları da açacaktır.
 
 ![State Management](https://flutter.dev/assets/development/data-and-backend/state-mgmt/ui-equals-function-of-state-54b01b000694caf9da439bd3f774ef22b00e92a62d3b2ade4f2e95c8555b8ca7.png)
 
-> En sevdiğim görsellerden yani bize diyorki ekrandaki değişiklik sayfadaki kodlarının state göre etkilenmesi sonucunda ortaya çıkandır.
+> En sevdiğim görsellerden yani bize diyor ki ekrandaki değişiklik sayfadaki kodlarının state göre etkilenmesi sonucunda ortaya çıkandır.
 
-Flutter kısmına gelecek olursak bir çok kullanım bir çok yöntem paketler ve yazılarla destekleniyor ama ben projelerimde iki tavır ile gidiyorum. Bunlardan birisi [mobx](https://www.youtube.com/watch?v=OxdgMVg6yl0), birisi [bloc](https://www.youtube.com/watch?v=L5MAldB2aSc) olarak söyleyebilirim. Bu iki yönetim ile sayfayı yönetirken global state yönetiminde [provider](https://pub.dev/packages/provider) kullanarak rahatlıkla sayfalarımda veri olur veya başka bir işlem olur yapabiliyorum.
+Flutter kısmına gelecek olursak birçok kullanım birçok yöntem paketler ve yazılarla destekleniyor ama ben projelerimde iki tavır ile gidiyorum. Bunlardan birisi [mobx](https://www.youtube.com/watch?v=OxdgMVg6yl0), birisi [bloc](https://www.youtube.com/watch?v=L5MAldB2aSc) olarak söyleyebilirim. Bu iki yönetim ile sayfayı yönetirken global state yönetiminde [provider](https://pub.dev/packages/provider) kullanarak rahatlıkla sayfalarımda veri olur veya başka bir işlem olur yapabiliyorum.
 
 > Örnek verelim: son projemde sepete ürün ekleme, silme işlemleri vardı ama bu işlem 3-4 farklı iç ve ana sayfalardan yapalabiliyordu. Bunu yapmak için sadece bir product sınıfı yapıp bunu globalde context te tutarak ilgili metodu çağırarak sonuca varmış oldum.
 > Bir örnek de [Cumhuriyet](https://play.google.com/store/apps/details?id=tr.com.vbt.cumhuriyetmobileapp) app'inde sayfa detayındaki font değişikliği veya tema hareketleri olarak inceleyebilirsiniz.
@@ -18,13 +18,13 @@ Flutter kısmına gelecek olursak bir çok kullanım bir çok yöntem paketler v
 ![mobx](../../image/core/mobx.png)  
 Biz kendi yapımıza gelecek olursak ilk olarak sayfa özelinde gidelim burada mobx tercih ettim. Sebepleri olumlu olumsuz yönleri elbette her şey gibi var ama hızlı ve çok fazla tekrar kod yazmadan observer yaklaşım ile bunu yapmak projelerim için gayet mantıklı.
 
-> Burada yine yapacağımız proje bazında düşünecek olursak daha fazla kontrollü ve zamanımız test yapmayada musahit ise bloc pattern ile gidip bunları yönetmenin avantajı görülebilir ama ben bu şartlarda bunun gerçekci olamdığını düşündüğüm için hızlı ve performans için bloc seçiyorum.
+> Burada yine yapacağımız proje bazında düşünecek olursak daha fazla kontrollü ve zamanımız test yapmaya da müsait ise bloc pattern ile gidip bunları yönetmenin avantajı görülebilir ama ben bu şartlarda bunun gerçekci olamdığını düşündüğüm için hızlı ve performans için bloc seçiyorum.
 
 Haydi projemizde kullanmaya başlayalım:
 
 1. [Mobx](https://pub.dev/packages/mobx) paketi , [build runner](https://pub.dev/packages/build_runner) paketi ve [flutter mobx ](https://pub.dev/packages/flutter_mobx) paketi pub.dev den indirilir.
 2. VSCode için kullandığım extensionları indirip hem hızlı hemde anlık kod yazmayı sağlıyoruz.
-   1. [Mobx](https://marketplace.visualstudio.com/items?itemName=Flutterando.flutter-mobx) extensionu ile hem anlık build almasını hemde observer widgetlar sağlıyoruz.
+   1. [Mobx](https://marketplace.visualstudio.com/items?itemName=Flutterando.flutter-mobx) extensionu ile hem anlık build almasını hem de observer widgetlar sağlıyoruz.
 
 > Flutter ile mobx paketinin çalışma prensibi aslında yazılan mobx store sınıflarının build runner paketi aracalığıyla generator \_g.dart sınıflarının oluşması sonucunda oluyor.
 
@@ -55,7 +55,7 @@ abstract class _LoginViewModelBase with Store, BaseViewModel {
 }
 ```
 
-!> Her işlemden sonra eğer mobx extensionu kullanıyorsanız dosyayı kayıt ettiğinizde kendisi g.dart sınıfını oluşturacaktır yada bu komutu kullanarak yapabilirsiniz: `sh mobx.sh`
+> Her işlemden sonra eğer mobx extensionu kullanıyorsanız dosyayı kayıt ettiğinizde kendisi g.dart sınıfını oluşturacaktır ya da bu komutu kullanarak yapabilirsiniz: `sh mobx.sh`
 
 mobx.sh
 
@@ -71,7 +71,7 @@ fi
 
 Ve işlem sonunda g.dart dosyanızda yapmış olduğunuz işlemlere göre kodlar üretiliyor olacak eğer dediğim gibi extension ile anlık dinlemiyorsanız **her defasında** bu işlemi yapmanız gerekiyor.
 
-Bir kaç mobx özelinde bilinemsi gereken nokta mevcut gelin bunlara bakalım:
+Birkaç mobx özelinde bilinmesi gereken nokta mevcut gelin bunlara bakalım:
 
 - Observable: Sayfamızda değişecek değerlere verdiğimiz bir bağlamdır bu sayede kendisine gelen değerleri doğrudan alıp dinleyenlere haber verecektir.
 - Computed: Bu değişken tipi ise sayfada observer olan nesneleri dinleyip son halini bize döndüren durumdur yani hesaplanmış hali gibi düşünebilirsiniz.
@@ -94,11 +94,11 @@ Bu üç işlemin sonunda sayfamızda observer olarak işlenmiş olan bir widget 
 
 ---
 
-Peki sayfayı yönetmeyi anladık bu global state yönetimi konusuna değinelim. Projenizde bir kullancınızın baştan sona ilgilendiren ve her katmanda bir etkilenmesi olabilir. Yine aynı şekilde hep verilen örneklerden olan temanızın değişikliği gibi bir durumda olabilir. Bu tarz durumlarda global seviyede bir sınıf tanımlayarak ilgili değişiklikleri bir ana yerde sağlayıp diğer sınıflardan [context](https://api.flutter.dev/flutter/widgets/State/context.html?gclsrc=ds&gclsrc=ds) aracılığıyla yakalayıp değiştirme imkanı ediniyoruz.
+Peki sayfayı yönetmeyi anladık bu global state yönetimi konusuna değinelim. Projenizde bir kullanıcınızın baştan sona ilgilendiren ve her katmanda bir etkilenmesi olabilir. Yine aynı şekilde hep verilen örneklerden olan temanızın değişikliği gibi bir durumda olabilir. Bu tarz durumlarda global seviyede bir sınıf tanımlayarak ilgili değişiklikleri bir ana yerde sağlayıp diğer sınıflardan [context](https://api.flutter.dev/flutter/widgets/State/context.html?gclsrc=ds&gclsrc=ds) aracılığıyla yakalayıp değiştirme imkanı ediniyoruz.
 
-> Tabiki bu aslında yazılımda çok alışık olduğumuz [Dependecy Injection](https://blog.gtiwari333.com/2011/05/understanding-dependency-injection-and.html) mantığı olarak düşünebilirsiniz bu sayede alt sınıflardan hem kendi sınıfını hemde üst sınıftaki objeyi değiştirip güncelleyip etkileyebiliyoruz.
+> Tabii ki bu aslında yazılımda çok alışık olduğumuz [Dependecy Injection](https://blog.gtiwari333.com/2011/05/understanding-dependency-injection-and.html) mantığı olarak düşünebilirsiniz bu sayede alt sınıflardan hem kendi sınıfını hem de üst sınıftaki objeyi değiştirip güncelleyip etkileyebiliyoruz.
 
-Projlerimizde genelde birden çok global durum olduğu için provider paketi içindeki multiProvider özelliğini kullanarak içerisine istediğimiz nesneleri vs atıyoruz.(Özellikle son zamanda gelen lazy özelliğini aktif ederek projede ihtiyacı olduğunda ayağa kalkmasını ve performans artışı sağlamış olurusunuz.)
+Projelerimizde genelde birden çok global durum olduğu için provider paketi içindeki multiProvider özelliğini kullanarak içerisine istediğimiz nesneleri vs atıyoruz.(Özellikle son zamanda gelen lazy özelliğini aktif ederek projede ihtiyacı olduğunda ayağa kalkmasını ve performans artışı sağlamış olursunuz.)
 
 ```dart
 MultiProvider(
@@ -106,7 +106,7 @@ MultiProvider(
     child: MyApp()}
 ```
 
-> Normalde direk ApplicationProvider sınıfındaki providers nesnesini de verebilirdim ama örnek olsun diye sadece birini bağladım. Burada [depedend item](https://www.filledstacks.com/post/flutter-provider-v3-architecture/) gibi mantıkla providerin türlerini bağlamayı hedefliyoruz ama ben genelde kendi projelerimde bir kaç tanesi yeterli olduğu için çok detayına girmeden işi çözüyorum.
+> Normalde direk ApplicationProvider sınıfındaki providers nesnesini de verebilirdim ama örnek olsun diye sadece birini bağladım. Burada [depedend item](https://www.filledstacks.com/post/flutter-provider-v3-architecture/) gibi mantıkla providerin türlerini bağlamayı hedefliyoruz ama ben genelde kendi projelerimde birkaç tanesi yeterli olduğu için çok detayına girmeden işi çözüyorum.
 
 Kendi ürünlerimden bir örnek verecek olursam bir kullanıcıyı global state içine atıp;
 
@@ -164,9 +164,9 @@ Widget buildLocaleTextMinumumTotal(BuildContext context) {
 
 > context.watch Provider.of<User>(context,listen:true) anlamına gelmektedir farkı ise false göre; anlık değişiklikleri dinler ve kendini günceller listen true widgetlerin kendini yenilemesi için kullandığımız kısım gibi düşünebilirsiniz.
 
-Ve state yönetimini tamamladık şimdi gelin derslerine bakalım
+Ve state yönetimini tamamladık şimdi gelin derslerine bakalım👀
 
-Ve ana modelimizde hazır daha fazlası için 🥳
+Ve ana modelimiz de hazır daha fazlası için 🥳
 
 | Konular          | Açıklama                                                                                                                                                         |
 | ---------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------- |
