@@ -1,5 +1,7 @@
 # Android Uygulama Paket, Market Yönetimi ve Fastlane
 
+![Android Publish](../../image/drawio/folders-googlePlay.png)
+
 Artık uygulamamızın mimarisini yazıp başlayıp bitirdik ve marketlerde görmek istiyoruz.Burada Android tarafı için yapmamız gereken süreçler ve bu süreçler sonunda Google Play Store tarafında görmüş olacağız.
 
 Peki Süreçler:

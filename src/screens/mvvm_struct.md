@@ -1,8 +1,10 @@
 # MVVM Yapısı
 
+![MVVM](../../image/drawio/folders-mvvm.png)
+
 MVVM gibi yaklaşımların temel amacı aslında test yazmayı veya parçalamayı artırmaktır. Bir çok yapı mevcut olup basitten karmaşığa doğru şöyle kabaca sıralamak istersek;
 
-MVC -> MVVM -> Clean Architecture(Viper)
+[MVC](https://www.tutorialsteacher.com/mvc/mvc-architecture#:~:text=MVC%20stands%20for%20Model%2C%20View,data%20retrieved%20from%20the%20database.) -> [MVVM](https://en.wikipedia.org/wiki/Model%E2%80%93view%E2%80%93viewmodel) -> [Clean Architecture(Viper)](https://blog.cleancoder.com/uncle-bob/2012/08/13/the-clean-architecture.html)
 
 Şimdi burada bu bundan iyi demek çok doğru bir yaklaşım değildir.Test yazdığımız sürece zaten bizi ilgili mimari kendisine çekecektir.Bu proje için MVVM yapısını ele alıp oldukça basit ama etkili kullanmayı işleyeceğim.
 

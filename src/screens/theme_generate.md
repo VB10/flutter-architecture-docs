@@ -1,5 +1,7 @@
 # Tema Yönetimi
 
+![Tema](../../image/drawio/folders-Theme.png)
+
 Projelerde çok değerli bir kısıma geldik.Özellikle bu kısım projelerin renk, stil gibi özelliklerini belirlediğimiz kısım olacak.
 
 Bir çok projede gördüğüm her widget için ayrı bir style yapılıyor.Örneğin;

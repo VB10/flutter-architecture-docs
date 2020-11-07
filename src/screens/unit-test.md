@@ -1,5 +1,7 @@
 # Birim Testi (Unit Test)
 
+![Unit Test](../../image/drawio/folders-Test.png)
+
 Birim testi yani unit test konusu oldukça değerli ve bir yazılımın kalitesi için olmazsa olmaz bir konudur.Mobil kısımda aslında çok büyük unit testler yazılmıyor genelde gördüğüm kadarıyla ama yazılım disiplini fark etmeden her zaman testlerimizi yazabiliriz.
 
 Bir mobil uygulamanın kalitesini ne kadar az cihaz üzerinde sabit kod (client static code) yazılırsa o kadar iyi olduğu anlamına gelir.Yani bağımlılık tamamiyen servis katmanınıza bağımlı olup değişikliklere göre buradan yönetilirse uygulama oldukça o kadar yönetilebilir olur.

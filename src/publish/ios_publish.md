@@ -1,5 +1,7 @@
 # IOS Uygulama Paket, Market Yönetimi ve Fastlane
 
+![ios publish](../../image/drawio/folders-iosPublish.png)
+
 Artık uygulamamızın mimarisini yazıp başlayıp bitirdik ve marketlerde görmek istiyoruz.Burada IOS tarafı için yapmamız gereken süreçler ve bu süreçler sonunda App Store tarafında görmüş olacağız.
 
 Peki Süreçler:

@@ -1,5 +1,7 @@
 # Geliştirmeler(Features)
 
+![Features](../../image/drawio/folders-Features.png)
+
 Projelerimizde iki adımlı geliştirmeler genelde oluyor.Bir tarafta ana kısımlarımız diğer tarafa ise bu ana kısımlarımızdan beslenen ekranlarımız ve geliştirmelerimiz bulunuyor. Bu gelişmeler neler olabilir diye düşünecek olursak;
 
 - Doğrulama
