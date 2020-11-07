@@ -21,15 +21,15 @@
 
 * Ekranlar
 
-  - [Geliştirmeler (Features)](themes.md)
+  - [Geliştirmeler (Features)](src/screens/features.md)
   - [MVVM Yapısı (MVVM Structure)](src/screens/mvvm_struct.md)
   - [Tema Yönetimi (Theme Management)](src/screens/theme_generate.md)
   - [Birim Test (Unit Test)](src/screens/unit-test.md)
 
 * Publish
 
-  - [IOS Paket, Market Yönetimi ve Fastlane](themes.md)
-  - [Android Paket,Market Yönetimi ve Fastlane](src/screens/mvvm_struct.md)
+  - [IOS Paket, Market Yönetimi ve Fastlane](src/publish/ios_publish.md)
+  - [Android Paket,Market Yönetimi ve Fastlane](src/publish/android_publish.md)
 
-- [Referans Projeler](image/drawio/folders-projects.png)
+- [Referans Projeler](src/support/projects.md)
 - [Biraz da Ben](src/support/me-about.md)
