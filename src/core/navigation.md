@@ -2,11 +2,11 @@
 
 ![navigations](../../image/drawio/folders-navigation.png)
 
-Projelerin hayatında en önemli olan kısımlardan birisidir. Özellikle mobil appte çok sıklıkla kullanıp sayfalar arası veri taşıma veya sayfalardan geçiş animasyonları gibi katmanları burada yapıyoruz.
+Projelerin hayatında en önemli olan kısımlardan birisidir. Özellikle mobil app için çok sıklıkla kullanıp sayfalar arası veri taşıma veya sayfalardan geçiş animasyonları gibi katmanları burada yapıyoruz.
 
-> Navigasyon işlemi için bir kaç yöntem mevcut ben en iyi yöntem olarak navigation key kullanarak global olarak yönetmeyi seviyorum. Bu yöntemle bir daha contexte ihtyacım olmadan kullanabiliyorum. Aynı şekilde bu değişkene signleton olarak erişebildiğim gibi provider kısmınada ekleyip istediğim anda erişebiliyorum.
+> Navigasyon işlemi için birkaç yöntem mevcut ben en iyi yöntem olarak navigation key kullanarak global olarak yönetmeyi seviyorum. Bu yöntemle bir daha contexte ihtiyacım olmadan kullanabiliyorum. Aynı şekilde bu değişkene signleton olarak erişebildiğim gibi provider kısmına da ekleyip istediğim anda erişebiliyorum.
 
-Öncelikle bir navigation sınıfı yaratıyorum. Bu içerisinde hem navigation keyi tutacak hemde navigation işlemlerimi yapacak. Burada proje boyunca kullanacağım için navigationu lazy singleton olarak bir sınıf tanımlayıp her yerden çağırabilecek hale geliyorum.
+Öncelikle bir navigation sınıfı yaratıyorum. Bu içerisinde hem navigation keyi tutacak hem de navigation işlemlerimi yapacaktır. Burada proje boyunca kullanacağım için navigationu lazy singleton olarak bir sınıf tanımlayıp her yerden çağrılabilecek hale geliyorum.
 
 ```dart
 class NavigationService implements INavigationService {
@@ -19,7 +19,7 @@ class NavigationService implements INavigationService {
 }
 ```
 
-Ardından sınıfıma navigate hareketleri kazandırıyorum. Bir çok durum olabilir ama ben projelerimde çok sık kullandığım ikisini ekledim şuanlık devamında diğerlerinide eklemiş oluruz.
+Ardından sınıfıma navigate hareketleri kazandırıyorum. Birçok durum olabilir ama ben projelerimde çok sık kullandığım ikisini ekledim şuanlık devamında diğerlerini de eklemiş oluruz.
 
 ```dart
 
@@ -34,9 +34,9 @@ Ardından sınıfıma navigate hareketleri kazandırıyorum. Bir çok durum olab
   }
 ```
 
-Artık bu sınıfımızı kullanıp projemizde hareketleri buradan yapabiliriz. Dediğim gibi bir yerden yönetmek bize her anlamda avantaj sağlayacaktır.(Misal hangi sayfaya daha çok girdiği verilerini bu katmandan analatik tutarak servislere atabilmek gibi.)
+Artık bu sınıfımızı kullanıp projemizde hareketleri buradan yapabiliriz. Dediğim gibi bir yerden yönetmek bize her anlamda avantaj sağlayacaktır.(Misal hangi sayfaya daha çok girdiği verilerini bu katmandan analitik tutarak servislere atabilmek gibi.)
 
-Projemiz içindeki main.dart dosyasına gidip bu navigator keyimizi verelim ve projenin buradan işlem yapacağını anlamış olsun.
+Projemiz içindeki main.dart dosyasına gidip bu navigator key'imizi verelim ve projenin buradan işlem yapacağını anlamış olsun.
 
 ```dart
 class MyApp extends StatelessWidget {
@@ -51,7 +51,7 @@ class MyApp extends StatelessWidget {
   }
 ```
 
-Navigator Key tanımladıktan sonra bir ihtiyacımız olan [onGerateRoute](https://github.com/VB10/flutter-architecture-template/blob/master/lib/core/init/navigation/navigation_route.dart) kısmı bu kısım için ise bize lazım olan bir yönlendirme yönetimi yapacak katman.
+Navigator Key tanımladıktan sonra  ihtiyacımız olan [onGerateRoute](https://github.com/VB10/flutter-architecture-template/blob/master/lib/core/init/navigation/navigation_route.dart) kısmı, bu kısım için ise bize lazım olan bir yönlendirme yönetimi yapacak katmandır.
 
 > Yönlendirme yönetiminde amaç hangi sabitin hangi yere gideğini belirlemek ve geçiş yaparken animasyonları belirlemek olarak düşünebilirsiniz.
 
@@ -75,11 +75,11 @@ class NavigationRoute {
 
 ```
 
-Temel mantıkta ilgili sabitlere göre yönlendirmeyi her sayfa için tanımlayı pardından buradaki koşullarda yönlendirmeyi veya dataları paslamanız gerekmektedir.
+Temel mantıkta ilgili sabitlere göre yönlendirmeyi her sayfa için tanımlayıp ardından buradaki koşullarda yönlendirmeyi veya verileri paslamanız gerekmektedir.
 
-> Bir enum yapısı yapılıp extension da eklenebilir ben navigation da sabit tanımlayı daha kolay ve hızlı buluyorum.
+> Bir enum yapısı yapılıp extension da eklenebilir.Ben navigation da sabit tanımlamayı daha kolay ve hızlı buluyorum.
 
-Burada normalNavigate gibi misal projelerimde fadein, veye bounce out gibi eventler vererek sayfa geçişlerimi yapabiliyorum [bunların hepsini ](https://github.com/VB10/flightflutter/tree/master/lib/core/init/navigation)bu katmanda verip sadece [ilgili yönlendirme sınıflarına](https://www.youtube.com/watch?v=H9z0SyFs6Uc) paslamak oluyor.
+Burada normalNavigate gibi misal projelerimde fadein veya bounce out gibi eventler vererek sayfa geçişlerimi yapabiliyorum [bunların hepsini ](https://github.com/VB10/flightflutter/tree/master/lib/core/init/navigation)bu katmanda verip sadece [ilgili yönlendirme sınıflarına](https://www.youtube.com/watch?v=H9z0SyFs6Uc) paslamak oluyor.
 
 ```dart
 Route fadeNavigate(Widget widget, RouteSettings settings) {
@@ -89,7 +89,7 @@ Route fadeNavigate(Widget widget, RouteSettings settings) {
 
 ![Animation Image](../../image/core/route_animation.png)
 
-Ve artık gideceği yer ve nasıl yapılacağı hazır sadece gideceği sabitler tanımlamamız gerekiyor.
+Ve artık gideceği yer ve nasıl yapılacağı hazır sadece  sabitleri tanımlamamız gerekiyor.
 
 ```dart
 class NavigationConstants {

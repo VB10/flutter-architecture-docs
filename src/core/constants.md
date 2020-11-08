@@ -2,12 +2,12 @@
 
 ![constants](../../image/drawio/folders-constants.png)
 
-Bir uygulama hayatında çok önemli olmasada yönetimi açısından önemli olan bir kavramdır. Özellikle sabit tanımlarken iki tavır belirliyorum genelde:
+Bir uygulama hayatında çok önemli olmasa da yönetimi açısından önemli olan bir kavramdır. Özellikle sabit tanımlarken iki tavır belirliyorum genelde:
 
-1. Proje boyunca kullanılacak ve katma değeri çok yüksek ise(Proje ismi gibi) bunları [Magic Number](https://help.semmle.com/wiki/display/JAVA/Magic+numbers#:~:text=A%20magic%20number%20is%20a,for%20other%20programmers%20to%20understand.) olarak tanımlıyorum.
+1. Proje boyunca kullanılacak ve katma değeri çok yüksek ise(proje ismi gibi) bunları [Magic Number](https://help.semmle.com/wiki/display/JAVA/Magic+numbers#:~:text=A%20magic%20number%20is%20a,for%20other%20programmers%20to%20understand.) olarak tanımlıyorum.
 2. Projede gerekli alanlarda ihtiyacım olacak ise [lazy singleton pattern](https://www.journaldev.com/1377/java-singleton-design-pattern-best-practices-examples#eager-initialization) kullanarak yapıyorum.
 
-> Bu tarz tanımlamalar yaparken kendi oluşturduğum snippet'larımı kullanarak çok hızlıca tanımlıyorum
+> Bu tarz tanımlamalar yaparken kendi oluşturduğum snippet'larımı kullanarak çok hızlıca tanımlıyorum.
 
 ## Magic Number
 
@@ -24,7 +24,7 @@ class YourConstantsClass {
 
 ## Lazy Singleton Pattern
 
-Singleton pattern bildiğimiz gibi bir değişkenin hayatı boyunca ayakta tutan ve yeni bir nesne üretmemizi engelleyen dizayn olarak düşünebiliriz. Burada dizaynın alt dalları mevcut.Ben kullanırken lazy yaklaşımını seviyorum. Buradaki amaç ilgili obje çağırıldığı anda doldurulması ve bundan sonra hayatına devam etmesi.
+Singleton pattern bildiğimiz gibi bir değişkeni hayatı boyunca ayakta tutan ve yeni bir nesne üretmemizi engelleyen dizayn olarak düşünebiliriz. Burada dizaynın alt dalları mevcut.Ben kullanırken lazy yaklaşımını seviyorum. Buradaki amaç ilgili obje çağrıldığı anda doldurulması ve bundan sonra hayatına devam etmesi.
 
 ```dart
 class YourConstantsClass {

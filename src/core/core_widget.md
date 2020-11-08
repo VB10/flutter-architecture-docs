@@ -2,7 +2,7 @@
 
 ![Core Widget](../../image/drawio/core-widgets.png)
 
-Projeler widget'larımızı ne kadar parçalayabilirsek bizim gücümüz bir o kadar artacaktır.Bu yapıda dikkat etmemiz gereken hangileri ana widget olacağıdır.
+Projeler de widget'larımızı ne kadar parçalayabilirsek bizim gücümüz bir o kadar artacaktır.Bu yapıda dikkat etmemiz gereken hangilerinin ana widget olacağıdır.
 
 > Bu yazıyı okumadan önce [stateless](https://www.youtube.com/watch?v=ZkP7QgLaZcY) ve [statefull](https://www.youtube.com/watch?v=6baZbJiIuiQ) kavramları ile ilgili içerikleri izlemeyi unutmayın.
 
@@ -52,7 +52,7 @@ class _CustomIndicatorState extends State<CustomIndicator> {
 }
 ```
 
-Gibi bir örnekle hiçbir kodu sayfaya eklemeden atomic olarak dışarı çıkarmış ve işimizi bitirmiş olacaktık.Tabiki buralara ekleme yapılabilir çoğaltılabilir ama tüm mantık aslında bu kadar **basit** ve **sade** olmalı atomic design için.
+Gibi bir örnekle hiçbir kodu sayfaya eklemeden atomic olarak dışarı çıkarmış ve işimizi bitirmiş olacaktık.Tabiki buralara ekleme yapılabilir, çoğaltılabilir ama tüm mantık aslında atomic design için bu kadar **basit** ve **sade** olmalı.
 
-Örnek bir projemdeki atomic katmanımım şu şekilde;
+Örnek bir projemdeki atomic katmanım şu şekilde;
 ![widgets](../../image/core/widgets.png)

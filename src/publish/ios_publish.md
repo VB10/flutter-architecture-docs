@@ -18,19 +18,19 @@ Biz bu mimari serisinde fastlane üzerinden daha çok gittik ama ilk sıfırdan 
 
 > Testflight üzerinde test açmanın internal testerler için doğrudan external testerler için her defasında bir review süreci olmaktadır.
 >
-> > Bu süreci aşmak için yöntem şudur: 1.0.1 diye versiyon çıkılır bir kere mahsus review sürecine girer ardından o versiyonla ilgili her geliştirme versiyon numarası aynı kalmak şartıyla build number değiştirilerek atılır ve doğrudan güncellenmiş olur.
+> > Bu süreci aşmak için yöntem şudur: 1.0.1 diye versiyon çıkılır bir kereye mahsus review sürecine girer ardından o versiyonla ilgili her geliştirme versiyon numarası aynı kalmak şartıyla build number değiştirilerek atılır ve doğrudan güncellenmiş olur.
 
 > Canlı yayına geçerken ekran görüntüleri dahil olmak üzere her şeye takıyorlar.Ben genelde [buradan](https://www.appstorescreenshot.com/) yapıyorum siz de seçebilirsiniz.
 
 > Eğer uygulamanız herkesin girebileceği bir app değilse test bunu muhakkak belirtip test kullanıcısı vermeyi unutmayın.
 
-> !> Test kullanıcı verirken adı ve şifreyi doğru vermeyi unutmayın.Ben yanlışlıkla başına boşluk koyup vermiştim, backendde trim olmadan bakıldığı için veya mobilde yapmadığım için app kullanıcı şifre yanlış diye reject yemişliğim var.
+> Test kullanıcı verirken adı ve şifreyi doğru vermeyi unutmayın.Ben yanlışlıkla başına boşluk koyup vermiştim, backendde trim olmadan bakıldığı için veya mobilde yapmadığım için app kullanıcı şifre yanlış diye reject yemişliğim var.
 
-Paketi çıkma işleminde ya manuel yöntemler videoda anlattığım gibi yada şimdi anlatacağım fastlane gibi otomasyonlar ile doğrudan paketinizi canlıya çıkabilirsiniz.Bunun dışında paketinizi release modda çıkmış olmanız önemlidir.
+Paketi çıkma işleminde ya manuel yöntemler videoda anlattığım gibi ya da şimdi anlatacağım fastlane gibi otomasyonlar ile doğrudan paketinizi canlıya çıkabilirsiniz.Bunun dışında paketinizi release modda çıkmış olmanız önemlidir.
 
 ## Fastlane
 
-Fastlane bizim için ara tüm işlemleri yapan kocaman bir app distribition uygulamasıdır.İçinde envayi çeşit yöntem ile paketimizi tek tuşla çıkma imkanı sunar.
+Fastlane bizim için ara tüm işlemleri yapan kocaman bir app distribution uygulamasıdır.İçinde envayi çeşit yöntem ile paketimizi tek tuşla çıkma imkanı sunar.
 
 Bu paketlerden bazıları:
 
@@ -79,7 +79,7 @@ Buradaki gibi misal kendi kullandığım bir projede hazırlayıp kullanıcı fa
 
 ---
 
-Ve ana modelimizde hazır daha fazlası için 🥳
+Ve ana modelimiz de hazır daha fazlası için 🥳
 
 [![Mobx](https://img.youtube.com/vi/fACGunnRbzA/0.jpg)](https://www.youtube.com/watch?v=fACGunnRbzA)
 

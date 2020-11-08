@@ -2,7 +2,7 @@
 
 ![MVVM](../../image/drawio/folders-mvvm.png)
 
-MVVM gibi yaklaşımların temel amacı aslında test yazmayı veya parçalamayı artırmaktır. Bir çok yapı mevcut olup basitten karmaşığa doğru şöyle kabaca sıralamak istersek;
+MVVM gibi yaklaşımların temel amacı aslında test yazmayı veya parçalamayı artırmaktır. Birçok yapı mevcut olup basitten karmaşığa doğru şöyle kabaca sıralamak istersek;
 
 [MVC](https://www.tutorialsteacher.com/mvc/mvc-architecture#:~:text=MVC%20stands%20for%20Model%2C%20View,data%20retrieved%20from%20the%20database.) -> [MVVM](https://en.wikipedia.org/wiki/Model%E2%80%93view%E2%80%93viewmodel) -> [Clean Architecture(Viper)](https://blog.cleancoder.com/uncle-bob/2012/08/13/the-clean-architecture.html)
 
@@ -10,9 +10,9 @@ MVVM gibi yaklaşımların temel amacı aslında test yazmayı veya parçalamay�
 
 ## View
 
-İçerisinde ana ekran modüllerimizin olduğu ve ekran çizimlerimizi yaptığımız ana kısım olarak görebilirsiniz. Burada diğer atomlarımız ile birleştirip işlediğimiz bir noktadır. Burada kurguladığım bir baseView yapısı ile herhangi bir ekran yapılırken muhakkak bir viewModel dedike ederek sayfanın buradan türemesini ve tüm sayfaların ortak bir katmanda toplanmasını sağlıyorum.
+İçerisinde ana ekran modüllerimizin olduğu ve ekran çizimlerimizi yaptığımız ana kısım olarak görebilirsiniz. Burada diğer atomlarımız ile birleştirip işlediğimiz bir noktadır. Burada kurguladığım bir baseView yapısı ile herhangi bir ekran yapılırken muhakkak bir viewModel tanımlayarak sayfanın buradan türemesini ve tüm sayfaların ortak bir katmanda toplanmasını sağlıyorum.
 
-> Bu ne işe yarıyacak diyebilirsiniz. Misal birgün projemde internet olmadığında her sayfamda offline mod olması veya popup çıkması gibi bir seneryo olmuştu. Bunu doğrudan tüm ekranlarıma değilde bu katmanımda yapıp değişikliğe göre sayfayı durdurup bu hata mesajını çıkarmıştım.
+> Bu ne işe yarayacak diyebilirsiniz. Misal bir gün projemde internet olmadığında her sayfamda offline mod olması veya pop-up çıkması gibi bir seneryo olmuştu. Bunu doğrudan tüm ekranlarıma değilde bu katmanımda yapıp değişikliğe göre sayfayı durdurup bu hata mesajını çıkarmıştım.
 
 ```dart
   @override
@@ -29,7 +29,7 @@ MVVM gibi yaklaşımların temel amacı aslında test yazmayı veya parçalamay�
   }
 ```
 
-[Login sayfamızı](https://github.com/VB10/flutter-architecture-template/blob/master/lib/view/authenticate/login/view/login_view.dart) inceleyecek olursak bir ekran cizimiz için her şey orada iskelet olarak mevcut. Önceki yazılarda ele aldığım mobx ile birlikte tüm değişimler için observer bir yapı kurup hayata devam ediyorum.
+[Login sayfamızı](https://github.com/VB10/flutter-architecture-template/blob/master/lib/view/authenticate/login/view/login_view.dart) inceleyecek olursak bir ekran çizimi için her şey orada iskelet olarak mevcut. Önceki yazılarda ele aldığım mobx ile birlikte tüm değişimler için observer bir yapı kurup hayata devam ediyorum.
 
 ## ViewModel
 
@@ -57,7 +57,7 @@ abstract class _LoginViewModelBase with Store, BaseViewModel {
 }
 ```
 
-Burada artık tüm iş gerekliklerini tanımlayıp hayatımıza başlıyoruz.
+Burada artık tüm iş yükünü tanımlayıp hayatımıza başlıyoruz.
 
 ## Model
 
@@ -84,13 +84,13 @@ class TestModel extends BaseModel<TestModel> {
 }
 ```
 
-Json paketi google'in parse paketi olup çok fazla güzel özellikleri barındırıyor. Misal işte tüm sınıfı pascal case parçalamak için (yani servisiniz cevabı {"NAME":"Veli"} gibi dönüyor ise illaha size Name yazmak zorunda olmadan [annotation](https://pub.dev/packages/json_serializable#annotation-values) ile yapabilirsiniz.). Buradaki önemli olan BaseModel ilede bu modellerimizin network katmanımıza uygun olmaını sağıyoruz.
+Json paketi google'in parse paketi olup çok fazla güzel özellikleri barındırıyor. Misal işte tüm sınıfı pascal case parçalamak için (yani servisiniz cevabı {"NAME":"Veli"} gibi dönüyor ise illaki size Name yazmak zorunda olmadan [annotation](https://pub.dev/packages/json_serializable#annotation-values) ile yapabilirsiniz.). Buradaki önemli olan BaseModel ile de bu modellerimizin network katmanımıza uygun olmaını sağıyoruz.
 
-!> Json Serializable paketi aynı mobx gibi bir g.dart dosyası üretiyor.Bu işlem için ya mobx yazısındaki gibi build scriptini çalıştıracağız veya mobx extensionu eğer açık ise alt kısımda her kayıt aldığınızda kendisi otamatik üretecektir.
+> Json Serializable paketi aynı mobx gibi bir g.dart dosyası üretiyor.Bu işlem için ya mobx yazısındaki gibi build scriptini çalıştıracağız veya mobx extensionu eğer açık ise alt kısımda her kayıt aldığınızda kendisi otamatik üretecektir.
 
 ## Service
 
-Genelde projelerimde servis kısımlarımıda ayırma ve ara işlemleri burada yapmayı doğru buluyorum.Gerek test etmek açısından gerek servis kısımlarının ekran ile bağımlılığını azaltmak için kullanıyorum diyebilirim.
+Genelde projelerimde servis kısımlarımı da ayırma ve ara işlemleri burada yapmayı doğru buluyorum.Gerek test etmek açısından gerek servis kısımlarının ekran ile bağımlılığını azaltmak için kullanıyorum diyebilirim.
 
 Servis kısmımı hem bağımlılıkları hemde test için ilk olarak bir arayüz sınıfı yaparak bağımlıklarını hazırlıyorum.
 
@@ -117,11 +117,11 @@ class SplashService extends ISplashService   {
 }
 ```
 
-> Hem videolardan hemde gelecek olan api ve ekran bağlama derslerimde bu kısımları çok daha iyi anlayacaksınız.
+> Hem videolardan hem de gelecek olan api ve ekran bağlama derslerimde bu kısımları çok daha iyi anlayacaksınız.
 
 ---
 
-Ve ana modelimizde hazır daha fazlası için 🥳
+Ve ana modelimiz de hazır daha fazlası için 🥳
 
 [![Mobx](https://img.youtube.com/vi/OxdgMVg6yl0/0.jpg)](https://www.youtube.com/watch?v=OxdgMVg6yl0&t=604s)
 
